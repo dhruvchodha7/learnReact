@@ -46,8 +46,13 @@ const Checkout = (props) => {
     if (!formIsValid) {
       return;
     }
-
     //submit card data
+    props.onConfirm({
+      name: enteredName,
+      street: enteredStreet,
+      city: enteredCity,
+      postalCode: enteredPostal,
+    });
   };
   return (
     <form className={classes.form} onSubmit={confirmHandler}>
