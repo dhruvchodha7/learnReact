@@ -1,5 +1,5 @@
-import redux from 'redux';
-const couterReducer = (state = {counter:0}, action) => {
+import { createStore } from 'redux'
+const counterReducer = (state = {counter:0}, action) => {
     if(action.type === 'increment'){
         return{
             counter: state.counter+1
@@ -14,6 +14,6 @@ const couterReducer = (state = {counter:0}, action) => {
     return state;
 
 }
-const store = redux.configureStore();
+const store = createStore(counterReducer);
 
 export default store;
