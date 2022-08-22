@@ -7,7 +7,7 @@ const Counter = () => {
   const dispatch = useDispatch();
   const toggleCounterHandler = () => {};
   const incrementHandler = () => {
-    dispatch({ type: "increment" });
+    dispatch({ type: "increment", amount: 5 });
   }
 
   const decrementHandler = () => {
