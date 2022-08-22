@@ -1,12 +1,10 @@
-import { createStore } from "redux";
-
-import { createSlice, configureStore } from "@reduxjs/toolkit";
+import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 const initialCounterState = { counter: 0, showCounter: true };
 
 const counterSlice = createSlice({
-  name: "Counter",
-  initialCounterState,
+  name: 'counter',
+  initialState: initialCounterState,
   reducers: {
     increment(state) {
       state.counter++;
@@ -23,13 +21,13 @@ const counterSlice = createSlice({
   },
 });
 
-const initialAuthSate = {
+const initialAuthState = {
   isAuthenticated: false,
 };
 
 const authSlice = createSlice({
-  name: "authentication",
-  initialAuthSate,
+  name: 'authentication',
+  initialState: initialAuthState,
   reducers: {
     login(state) {
       state.isAuthenticated = true;
@@ -40,14 +38,11 @@ const authSlice = createSlice({
   },
 });
 
-createSlice({
-  name: "Auth",
-});
-
 const store = configureStore({
-  reducer: {counter: counterSlice.reducer, auth: authSlice.reducer},
+  reducer: { counter: counterSlice.reducer, auth: authSlice.reducer },
 });
 
 export const counterActions = counterSlice.actions;
 export const authActions = authSlice.actions;
+
 export default store;
