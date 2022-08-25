@@ -1,9 +1,10 @@
 import { Route } from "react-router-dom";
-import Welcome from "./components/Welcome";
-import Products from "./components/Products";
+import Welcome from "./pages/Welcome";
+import Products from "./pages/Products";
 function App() {
   return (
     <div>
+      <header></header>
       <Route path="/welcome">
         <Welcome />
       </Route>
