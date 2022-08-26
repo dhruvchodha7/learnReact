@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import MainNavigation from "./MainNavigation";
-import classes from './Layout.module.js'
+import classes from './Layout.module.css'
 
 const Layout = (props) => {
   return (
